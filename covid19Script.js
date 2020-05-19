@@ -121,7 +121,7 @@ time={
 function init(){
     document.querySelector("#population").innerHTML="Total population - "+populationSize;
     document.querySelector("#age").textContent="MinAge - "+minAge+", MaxAge - "+maxAge;
-    document.querySelector("#period").textContent="Incubation Period - "+covid.incubationPeriod;
+    document.querySelector("#period").textContent="Incubation Period - "+covid.incubationPeriod+" days";
 }
 
 function forwardTime(){
