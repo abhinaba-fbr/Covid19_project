@@ -4,22 +4,18 @@
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width , initial-scale=1.0"/>
         <link rel="icon" type="image/png" href="resources/coronavirus.png"/>
-        <style>
-            * {
-                margin: 0;
-                padding: 0;
-            }
-            .container {
-                margin: 0;
-                padding: 0;
-                display: flex;
-            }
-        </style>
+        <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="covid19Style.css"/>
         <title>COVID-19 Simulation</title>
     </head>
     <body>
         <div class="container">
             <canvas class="canvas"></canvas>
+        </div>
+        <div class="stats-container">
+            <p id="population">Total Population - </p>
+            <p id="age">MinAge - ,MaxAge - </p>
+            <p id="period">Incubation Period - </p>
         </div>
         <div class="controls-container">
             <button id="pause">Pause</button>
@@ -29,6 +25,8 @@
             <button id="stage2">Lockdown Stage-2</button>
             <button id="stage3">Lockdown Stage-3</button>
             <button id="removeLockdown">Lockdown Remove</button>
+        </div>
+        <div class="info-container">
             <h3 id="days">Days - </h3>
             <h3 id="total-cases">Total Cases - </h3>
             <h3 id="total-active">Active Infected - </h3>
@@ -43,6 +41,7 @@
             <p class="p3">.</p>
         </div>
         <div id="chart-container"></div>
+
         <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
         <script src="alertScript.js"></script>
         <script src="covid-19Script.js"></script>

@@ -118,6 +118,12 @@ time={
 };
 
 //program utilities
+function init(){
+    document.querySelector("#population").innerHTML="Total population - "+populationSize;
+    document.querySelector("#age").textContent="MinAge - "+minAge+", MaxAge - "+maxAge;
+    document.querySelector("#period").textContent="Incubation Period - "+covid.incubationPeriod;
+}
+
 function forwardTime(){
     if(time.hours==time.dayLength){
         updateChart();
@@ -413,6 +419,7 @@ for(let i=0;i<populationSize;i++){
 
 console.log(population);
 
+init();
 //Animate Function
 function animate(){
     if(stop==1){
