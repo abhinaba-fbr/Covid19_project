@@ -122,6 +122,9 @@ function init(){
     document.querySelector("#population").innerHTML="Total population - "+populationSize;
     document.querySelector("#age").textContent="MinAge - "+minAge+", MaxAge - "+maxAge;
     document.querySelector("#period").textContent="Incubation Period - "+covid.incubationPeriod+" days";
+    let insidePopulation=document.querySelector("#inside-population");
+    let pop=((rightBoundary-leftBoundary)/canvas.width)*populationSize;
+    insidePopulation.textContent="Population inside the lines - "+Math.round(pop);
 }
 
 function forwardTime(){
@@ -381,7 +384,7 @@ class Person{
     }
 }
 
-//Creating the particles/objects
+//Creating the particles/objects and initializating
 let population=[];
 for(let i=0;i<populationSize;i++){
     let x=randomNumber(personSize+1,canvas.width-(personSize+range));
@@ -420,6 +423,7 @@ for(let i=0;i<populationSize;i++){
 console.log(population);
 
 init();
+
 //Animate Function
 function animate(){
     if(stop==1){
