@@ -65,18 +65,18 @@ let requestId=0;
 let pause=0;
 let resume=1;
 let stop=0;
-let populationSize=2000;                                                 //changable
+let populationSize=3000;                                                 //changable
 let minAge=15,maxAge=80;                                                 //changable
 let personSize=1;                                                        //changable
-let range=1;                                                             //changable
-let leftBoundary=canvas.width/4,rightBoundary=canvas.width*3/4;          //changable
+let range=2;                                                             //changable
+let leftBoundary=150,rightBoundary=canvas.width-150;                     //changable
 let horizontalUnitLand=(rightBoundary-leftBoundary)/3;
 let verticalUnitLand=(canvas.height)/3;
 covid={
     infectiveDistance: personSize*2+range,                               
     R0: 0.2,                                                             //changable (!implemented)
     incubationPeriod: 14,                                                //changable
-    infectedRate: [0,0.3,0.5,0.7,0.9],                                   //changable
+    infectedRate: [0,0.4,0.6,0.8,0.95],                                  //changable
     deathRate: 0.02,                                                     //changable
     recovaryRate: 0.2,                                                   //changable
     infectedForeignRate: 0.8,                                            //changable
