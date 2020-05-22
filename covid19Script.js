@@ -80,7 +80,7 @@ covid={
     deathRate: 0.02,                                                     //changable
     recovaryRate: 0.2,                                                   //changable
     infectedForeignRate: 0.8,                                            //changable
-    infectedLocalRate: 0.01,                                             //changable
+    infectedLocalRate: 0,                                                //changable
     severity: [4,3,2,1],
     totalCount: 0,
     infectedCount: 0,
